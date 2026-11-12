@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "schema": [
+    {
+      "name": "header",
+      "namespace": "securenv",
+      "compact": false,
+      "flagsPosition": -1,
+      "fields": [
+        {
+          "name": "version",
+          "required": true,
+          "type": "uint",
+          "version": 1
+        },
+        {
+          "name": "algorithm",
+          "required": true,
+          "type": "uint",
+          "version": 1
+        },
+        {
+          "name": "opslimit",
+          "required": true,
+          "type": "uint",
+          "version": 1
+        },
+        {
+          "name": "memlimit",
+          "required": true,
+          "type": "uint",
+          "version": 1
+        },
+        {
+          "name": "salt",
+          "required": true,
+          "type": "fixed16",
+          "version": 1
+        },
+        {
+          "name": "nonce",
+          "required": true,
+          "type": "fixed24",
+          "version": 1
+        }
+      ]
+    },
+    {
+      "name": "entry",
+      "namespace": "securenv",
+      "compact": false,
+      "flagsPosition": -1,
+      "fields": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "version": 1
+        },
+        {
+          "name": "value",
+          "required": true,
+          "type": "buffer",
+          "version": 1
+        }
+      ]
+    },
+    {
+      "name": "env",
+      "namespace": "securenv",
+      "compact": false,
+      "flagsPosition": -1,
+      "fields": [
+        {
+          "name": "entries",
+          "required": true,
+          "array": true,
+          "type": "@securenv/entry",
+          "version": 1
+        }
+      ]
+    }
+  ]
+}
