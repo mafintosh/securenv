@@ -1,6 +1,6 @@
 {
   "name": "securenv",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Secure environment based on libsodium",
   "license": "Apache-2.0",
   "author": "",
